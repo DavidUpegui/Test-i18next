@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
 import { useRouter } from 'next/router'
-import { GetStaticProps } from 'next';
 import { useTranslation } from 'next-i18next'
 
 function Navbar() {
