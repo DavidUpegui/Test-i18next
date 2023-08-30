@@ -1,0 +1,8 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "btnChange": "Change Languaje"
+  },
+  "helloWorld": "Hello World"
+}

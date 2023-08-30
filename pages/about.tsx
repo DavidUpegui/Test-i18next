@@ -1,9 +1,19 @@
-import React from 'react'
+import React from "react";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { GetStaticProps } from "next";
+import { useTranslation } from "next-i18next";
 
 function About() {
-    return (
-        <div>Anm about page, just that c:</div>
-    )
+  const { t } = useTranslation("about");
+  return <div>{t("content")}</div>;
 }
 
-export default About
+export default About;
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale as string, ["layout", "about"])),
+    },
+  };
+};

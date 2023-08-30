@@ -3,6 +3,9 @@ module.exports = {
     i18n: {
       defaultLocale: 'es',
       locales: ['es', 'en'],
-      defaultNS: 'common'
+      fallbacks: {
+        en: 'es', 
+        es: 'en', 
+      },
     },
   }
